@@ -7,6 +7,8 @@ const videogamesCtrl = require('../controllers/videogames');
 router.get('/', videogamesCtrl.index)
 // GET /movies/new
 router.get('/new', videogamesCtrl.new);
+// GET /videogames/:id
+router.get('/:id', videogamesCtrl.show);
 // POST /movies
 router.post('/', videogamesCtrl.create);
 

@@ -14,8 +14,8 @@ function index(req, res) {
 }
 
 function show(req, res) {
-    Videogame.findById(req.params.id, function(err, game) {
-        res.render('videogames/show', { title: 'Videogame Detail', game });
+    Videogame.findById(req.params.id, function(err, videogame) {
+        res.render('videogames/show', { title: 'Videogame Detail', videogame });
     });
 }
 

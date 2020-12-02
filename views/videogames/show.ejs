@@ -1,0 +1,35 @@
+<%- include('../partials/header') %>
+<section id="show-page">
+    <div>Title: </div>
+    <div><%= videogame.title %></div>
+    <div>Release Year: </div>
+    <div><%= videogame.releaseYear %></div>
+    <div>ESRB Rating: </div>
+    <div><%= videogame.esrbRating %></div>
+    <div>Console: </div>
+    <div><%= videogame.console %></div>
+  </section>
+
+  <% if (videogame.reviews.length) { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Content</th>
+          <th>Rating</th>
+          <th>User</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% videogame.reviews.forEach(function(r) { %>
+          <tr>
+            <td><%= r.content %></td>
+            <td><%= r.rating %></td>
+            <td><%= r.user %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  <% } else { %>
+    <h5>No Reviews Yet</h5>
+  <% } %>
+  <%- include('../partials/footer') %>
