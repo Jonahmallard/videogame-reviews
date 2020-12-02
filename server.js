@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var methodOverride = require('method-override');
 
 // Always process the .env file EARLY!
 require('dotenv').config();
@@ -10,7 +11,7 @@ require('dotenv').config();
 // connect to the database with Mongoose
 require('./config/database');
 
-var indexRouter = require('./routes/index');
+var indexRouter = require('./routes/videogame');
 var usersRouter = require('./routes/users');
 
 var app = express();
@@ -22,8 +23,9 @@ app.set('view engine', 'ejs');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(cookieParser());
+app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
