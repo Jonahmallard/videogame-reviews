@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const gamerSchema = new Schema({
+const userSchema = new Schema({
   name: String,
   googleId: {
     type: String,
@@ -13,4 +13,4 @@ const gamerSchema = new Schema({
   timestamps: true
 });
 
-module.exports = mongoose.model('Gamer', gamerSchema);
+module.exports = mongoose.model('User', userSchema);
