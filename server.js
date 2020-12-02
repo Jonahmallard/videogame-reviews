@@ -3,6 +3,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var session = require('express-session');
+var passport = require('passport');
 var methodOverride = require('method-override');
 
 // Always process the .env file EARLY!
@@ -11,8 +13,12 @@ require('dotenv').config();
 // connect to the database with Mongoose
 require('./config/database');
 
-var indexRouter = require('./routes/videogame');
-var usersRouter = require('./routes/users');
+// Run the passport configuration code
+require('./config/passport');
+
+var indexRouter = require('./routes/index');
+var videogamesRouter = require('./routes/videogames');
+// var reviewsRouter = require('./routes/reviews');
 
 var app = express();
 
@@ -27,8 +33,23 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cookieParser());
 app.use(methodOverride('_method'));
 
+app.use(session({
+  secret: process.env.SECRET,
+  resave: false,
+  saveUninitialized: true
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use(function (req, res, next) {
+  res.locals.user = req.user;
+  next();
+});
+
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/videogames', videogamesRouter);
+// app.use('/reviews', reviewsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
