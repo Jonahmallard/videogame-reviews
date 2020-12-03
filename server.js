@@ -18,7 +18,7 @@ require('./config/passport');
 
 var indexRouter = require('./routes/index');
 var videogamesRouter = require('./routes/videogames');
-// var reviewsRouter = require('./routes/reviews');
+var reviewsRouter = require('./routes/reviews');
 
 var app = express();
 
@@ -49,7 +49,7 @@ app.use(function (req, res, next) {
 
 app.use('/', indexRouter);
 app.use('/videogames', videogamesRouter);
-// app.use('/reviews', reviewsRouter);
+app.use('/', reviewsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -16,6 +16,13 @@
           <td><%= g.esrbRating %></td>
           <td><%= g.console %></td>
           <td><a href="/videogames/<%= g._id %>">DETAILS</a></td>
+          <td>
+            <% if (user && user._id.equals(g.user)) { %>
+            <form action="/videogames/<%= g._id %>?_method=DELETE" method="POST">
+              <button type="submit">Delete</button>
+            </form>
+            <% } %>
+          </td>
         </tr>
         <% }); %>
       </tbody>
