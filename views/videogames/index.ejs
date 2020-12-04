@@ -17,9 +17,9 @@
           <td><%= g.console %></td>
           <td><a href="/videogames/<%= g._id %>">DETAILS</a></td>
           <td>
-            <% if (user && user._id.equals(g.user)) { %>
-            <form action="/videogames/<%= g._id %>?_method=DELETE" method="POST">
-              <button type="submit">Delete</button>
+            <% if (user) { %>
+            <form id="delete-btn" action="/videogames/<%= g._id %>?_method=DELETE" method="POST">
+              <button type="submit" id="delete">Delete</button>
             </form>
             <% } %>
           </td>

@@ -1,6 +1,7 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px;
+  background-color: black;
 }
 
 a {
@@ -13,7 +14,7 @@ table {
 
 table thead th {
   padding: 5px;
-  border-bottom: 2px solid #424748;
+  border-bottom: 2px solid white;
 }
 
 table td {
@@ -27,7 +28,7 @@ table td {
 
 #list a {
   border-radius: 4px;
-  background-color: #B8C0C2;
+  background-color: black;
   padding: 4px;
   text-decoration: none;
   font-size: 14px;
@@ -45,7 +46,7 @@ table td {
 * {
   box-sizing: border-box;
   font-family: Helvetica;
-  color: #424748;
+  color: white;
 }
 
 body {
@@ -60,11 +61,12 @@ body {
 
 body > nav {
   grid-area: nav;
-  background-color: #B8C0C2;
+  background-color: black;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 0 20px 0 30px;
+  color: white;
 }
 
 nav > img {
@@ -78,7 +80,7 @@ body > main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #E8ECEB;
+  background-color: black;
   padding: 20px;
   overflow-y: scroll;
 }
@@ -95,12 +97,12 @@ nav > a {
 }
 
 nav > a:hover:not(.active) {
-  color: white;
-  background-color: #424748;
+  color: black;
+  background-color: white;
 }
 
 nav > a.active {
-  color: white;
+  color: black;
   cursor: default;
 }
 
@@ -110,8 +112,7 @@ nav > a.active {
   grid-template-columns: repeat(2, minmax(auto, 22rem));
 }
 
-form *, 
-.dropdown {
+form *, .dropdown {
   font-size: 20px;
   padding: 5px;
   border-radius: 5px;
@@ -121,6 +122,25 @@ form *,
   grid-column: span 2;
   width: 10rem;
   margin-left: auto;
+  color: white;
+  background-color: black;
+}
+#new-form input[type="submit"]:hover {
+  grid-column: span 2;
+  width: 10rem;
+  margin-left: auto;
+  color: black;
+  background-color: white;
+}
+
+#delete {
+  color: white;
+  background-color: black;
+}
+
+#delete:hover {
+  color: black;
+  background-color: white;
 }
 
 table {
@@ -129,7 +149,7 @@ table {
 
 table thead th {
   padding: 5px;
-  border-bottom: 2px solid #424748;
+  border-bottom: 2px solid black;
 }
 
 table td {
@@ -143,7 +163,7 @@ table td {
 
 #list a {
   border-radius: 4px;
-  background-color: #B8C0C2;
+  background-color: black;
   padding: 4px;
   text-decoration: none;
   font-size: 14px;
@@ -163,18 +183,25 @@ table td {
   font-weight: bold;
 }
 
-#add-review-form,
-#add-performer-form {
+#add-review-form {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 1rem;
   margin-bottom: 2rem;
 }
 
-#add-review-form input[type="submit"],
-#add-performer-form input[type="submit"]  {
+#add-review-form input[type="submit"] {
   width: 10rem;
   grid-column: 2 / 3;
+  color: white;
+  background-color: black;
+}
+
+#add-review-form input[type="submit"]:hover {
+  width: 10rem;
+  grid-column: 2 / 3;
+  color: black;
+  background-color: white;
 }
 
 ul {
@@ -188,20 +215,20 @@ li {
 }
 
 hr {
-  color: #424748
+  color: black;
 }
 
 #badge-container {
   display: flex;
-  /* padding: 1rem; */
+  padding: 1rem; 
   width: 80%;
-  border: 2px solid #B8C0C2;
+  border: 2px solid black;
   border-radius: .5rem;
   margin: .5rem 0 2rem;
 }
 
 .badge {
-  background-color: #B8C0C2;
+  background-color: black;
   padding: .5rem;
   margin: 1rem;
   border-radius: .3rem;

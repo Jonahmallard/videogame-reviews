@@ -8,7 +8,6 @@
   <title><%= title %></title>
 </head>
 <body>
-    <nav><a href="/">Home</a> | <a href="/videogames">All Videogames</a> | <a href="/videogames/new">Add a Game</a></nav>
     <nav>
       <a href="/videogames" <%- title === 'All Videogames' ? 'class="active"' : '' %>>All Videogames</a>
       <% if (user) { %>
