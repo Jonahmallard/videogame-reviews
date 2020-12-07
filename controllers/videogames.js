@@ -5,7 +5,9 @@ module.exports = {
   show,
   new: newGame,
   create,
-  delete: deleteGame
+  delete: deleteGame,
+  edit,
+  update
 };
 
 function index(req, res) {
@@ -37,6 +39,27 @@ function create(req, res) {
       // for now, redirect right back to new.ejs
       res.redirect('/videogames');
     });
+}
+
+function edit(req, res) {
+  Videogame.findOne({_id: req.params.id}, function(err, videogame) {
+    if (err || !videogame) return res.redirect('/videogames');
+    res.render('videogames/edit', {videogame});
+  });
+}
+
+function update(req, res) {
+  Videogame.findOneAndUpdate(
+    {_id: req.params.id},
+    // update object with updated properties
+    req.body,
+    // options object with new: true to make sure updated doc is returned
+    {new: true},
+    function(err, videogame) {
+      if (err || !videogame) return res.redirect('/videogames');
+      res.redirect(`videogames/${videogame._id}`);
+    }
+  );
 }
 
 function deleteGame(req, res, next) {

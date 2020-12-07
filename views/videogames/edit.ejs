@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+<form id="edit-form" action="/videogames" method="GET">
+    <label>Title:</label>
+    <input type="text" name="title" value="title">
+    <label>Release Year:</label>
+    <input type="text" name="releaseYear" value="releaseYear">
+    <label>ESRB Rating</label>
+    <select name="esrbRating" value="esrbRating">
+      <option value="E">E</option>
+      <option value="T">T</option>
+      <option value="M">M</option>
+      <option value="RP">RP</option>
+    </select>
+    <label>Console:</label>
+    <input type="text" name="console" value="console">
+    <input type="submit" value="Save Game">
+</form>
+<%- include('../partials/footer') %>
