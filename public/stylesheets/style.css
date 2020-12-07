@@ -116,6 +116,7 @@ form *, .dropdown {
   font-size: 20px;
   padding: 5px;
   border-radius: 5px;
+  color: black;
 }
 
 #new-form input[type="submit"] {
@@ -129,6 +130,16 @@ form *, .dropdown {
   grid-column: span 2;
   width: 10rem;
   margin-left: auto;
+  color: black;
+  background-color: white;
+}
+
+#delete-cmt {
+  color: white;
+  background-color: black;
+} 
+
+#delete-cmt:hover {
   color: black;
   background-color: white;
 }

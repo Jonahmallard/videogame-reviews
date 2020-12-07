@@ -14,9 +14,9 @@
 <h2>Reviews</h2>
 <% if (user) { %>
   <form id="add-review-form" method="POST" action="/videogames/<%= videogame._id %>/reviews">
-    <label>Review:</label>
+    <label style="color:white;">Review:</label>
     <textarea name="content"></textarea>
-    <label>Rating:</label>
+    <label style="color:white;">Rating:</label>
     <select name="rating">
       <option value="1">1</option>
       <option value="2">2</option>
@@ -51,7 +51,7 @@
           <td>
             <% if (user && user._id.equals(r.user)) { %>
               <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
-                <button type="submit">X</button>
+                <button id="delete-cmt"type="submit">X</button>
               </form>
             <% } %>
           </td>
