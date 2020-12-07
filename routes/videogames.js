@@ -11,6 +11,8 @@ router.get('/new', isLoggedIn, videogamesCtrl.new);
 router.get('/:id', videogamesCtrl.show);
 // POST /movies
 router.post('/', isLoggedIn, videogamesCtrl.create);
+// GET edit
+
 // DELETE /videogames/:id
 router.delete('/:id', isLoggedIn, videogamesCtrl.delete);
 

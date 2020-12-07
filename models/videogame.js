@@ -24,6 +24,7 @@ const videogameSchema = new Schema({
   },
   esrbRating: String,
   console: String,
+  user: {type: Schema.Types.ObjectId, ref: 'User'},
   reviews: [reviewSchema]
 }, {
   timestamps: true

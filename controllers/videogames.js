@@ -22,9 +22,10 @@ function show(req, res) {
 
 function newGame(req, res) {
     res.render('videogames/new', { title: 'Add Game' });
-  }
+}
 
 function create(req, res) {
+    req.body.user = req.user._id;
     const game = new Videogame(req.body);
     // game.req.body.user = req.user._id;
     // game.req.body.userName = req.user.name;
