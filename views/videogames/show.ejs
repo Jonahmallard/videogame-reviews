@@ -15,9 +15,9 @@
 <h2>Reviews</h2>
 <% if (user) { %>
   <form id="add-review-form" method="POST" action="/videogames/<%= videogame._id %>/reviews">
-    <label style="color:white;">Review:</label>
+    <label class="label">Review:</label>
     <textarea name="content"></textarea>
-    <label style="color:white;">Rating:</label>
+    <label class="label">Rating:</label>
     <select name="rating">
       <option value="1">1</option>
       <option value="2">2</option>
@@ -59,7 +59,7 @@
         </tr>
       <% }); %>
       <tr>
-        <td colspan="2"></td>
+        <td colspan="3"></td>
         <td><strong><%= (total / videogame.reviews.length).toFixed(1) %></strong></td>
       </tr>
     </tbody>

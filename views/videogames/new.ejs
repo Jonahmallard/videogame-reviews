@@ -1,17 +1,17 @@
 <%- include('../partials/header') %>
 <form id="new-form" action="/videogames" method="POST">
-    <label>Title:</label>
+    <label class="label">Title:</label>
     <input type="text" name="title">
-    <label>Release Year:</label>
+    <label class="label">Release Year:</label>
     <input type="text" name="releaseYear">
-    <label>ESRB Rating</label>
+    <label class="label">ESRB Rating</label>
     <select name="esrbRating">
       <option value="E">E</option>
       <option value="T">T</option>
       <option value="M">M</option>
       <option value="RP">RP</option>
     </select>
-    <label>Console:</label>
+    <label class="label">Console:</label>
     <input type="text" name="console">
     <input type="submit" value="Add Game">
   </form>
