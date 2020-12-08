@@ -65,14 +65,8 @@ body > nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 0 20px 0 30px;
+  padding: 10px 40px 0 30px;
   color: white;
-}
-
-nav > img {
-  width: 34px;
-  object-fit: contain;
-  margin-right: auto;
 }
 
 body > main {
@@ -270,17 +264,6 @@ hr {
   border-radius: .3rem;
   font-size: .8rem;
   text-align: center;
-}
-
-.login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 34px;
-}
-
-.login img {
-  height: 30px;
 }
 
 .review-user {
