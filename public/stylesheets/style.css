@@ -112,6 +112,12 @@ nav > a.active {
   grid-template-columns: repeat(2, minmax(auto, 22rem));
 }
 
+#edit-form {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, minmax(auto, 22rem));
+}
+
 form *, .dropdown {
   font-size: 20px;
   padding: 5px;
@@ -127,6 +133,21 @@ form *, .dropdown {
   background-color: black;
 }
 #new-form input[type="submit"]:hover {
+  grid-column: span 2;
+  width: 10rem;
+  margin-left: auto;
+  color: black;
+  background-color: white;
+}
+
+#edit-form input[type="submit"] {
+  grid-column: span 2;
+  width: 10rem;
+  margin-left: auto;
+  color: white;
+  background-color: black;
+}
+#edit-form input[type="submit"]:hover {
   grid-column: span 2;
   width: 10rem;
   margin-left: auto;
