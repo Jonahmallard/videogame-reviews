@@ -19,7 +19,7 @@
     </nav>
   <main>
     <h1>Edit Game</h1>
-<form id="edit-form" action="/videogames/${ videogame._id }/edit" method="GET">
+<form id="edit-form" action="/videogames/<%= videogame._id %>?_method=PUT" method="POST">
     <label class="label">Title:</label>
     <input type="text" name="title" value="<%= videogame.title %>">
     <label class="label">Release Year:</label>

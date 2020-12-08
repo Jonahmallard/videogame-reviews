@@ -50,14 +50,14 @@ function edit(req, res) {
 
 function update(req, res) {
   Videogame.findOneAndUpdate(
-    {_id: req.params.id},
+    {_id: req.params.id, user: req.user._id},
     // update object with updated properties
     req.body,
     // options object with new: true to make sure updated doc is returned
     {new: true},
     function(err, videogame) {
       if (err || !videogame) return res.redirect('/videogames');
-      res.redirect(`videogames/${videogame._id}`);
+      res.redirect(`/videogames/${videogame._id}`);
     }
   );
 }
