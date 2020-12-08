@@ -2,6 +2,7 @@ body {
   padding: 25px;
   font: 20px;
   background-color: black;
+  font-style: Helvetica, sans-serif;
 }
 
 a {
@@ -30,7 +31,6 @@ table td {
   border-radius: 4px;
   background-color: black;
   padding: 4px;
-  text-decoration: none;
   font-size: 14px;
 }
 

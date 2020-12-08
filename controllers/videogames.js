@@ -63,7 +63,7 @@ function update(req, res) {
 }
 
 function deleteGame(req, res, next) {
-  Videogame.findOne(req.body)
+  Videogame.findOne({_id: req.params.id})
     .then(function(videogame) {
       if (!req.user._id) return res.redirect('/videogames');
       videogame.remove();
