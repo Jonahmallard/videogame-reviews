@@ -1,6 +1,6 @@
 <h1>App Title: Videogame Reviews</h1>
 
-<h2>Screenshot:</h2> ![alt text](https://imgur.com/QInZCTQ.png)
+☐<h2>Screenshot:</h2> ![alt text](https://imgur.com/QInZCTQ.png)
 
 <h2>Technologies Used:</h2> Express, Mongoose, MongoDB, JavaScript, and Node.js.
 
