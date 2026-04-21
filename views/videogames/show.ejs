@@ -13,7 +13,8 @@
 
   <br><br>
 <h2>Reviews</h2>
-<% if (user) { %>
+<!-- Temporarily disabled user check -->
+<!-- <% if (user) { %> -->
   <form id="add-review-form" method="POST" action="/videogames/<%= videogame._id %>/reviews">
     <label class="label">Review:</label>
     <textarea name="content"></textarea>
@@ -27,7 +28,7 @@
     </select>
     <input type="submit" value="Add Review">
   </form>
-<% } %>
+<!-- <% } %> -->
 
 <% if (videogame.reviews.length) { %>
   <table>

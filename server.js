@@ -11,10 +11,10 @@ var methodOverride = require('method-override');
 require('dotenv').config();
 
 // connect to the database with Mongoose
-require('./config/database');
+// require('./config/database');
 
 // Run the passport configuration code
-require('./config/passport');
+// require('./config/passport');
 
 var indexRouter = require('./routes/index');
 var videogamesRouter = require('./routes/videogames');

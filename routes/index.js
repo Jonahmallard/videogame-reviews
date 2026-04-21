@@ -1,29 +1,29 @@
 const express = require('express');
 const router = express.Router();
-const passport = require('passport');
+// const passport = require('passport');
 
 router.get('/', function(req, res, next) {
   res.redirect('/videogames');
 });
 
-// Login with Google
-router.get('/auth/google', passport.authenticate(
-  'google',
-  { scope: ['profile', 'email'] }
-));
+// Login with Google - temporarily disabled
+// router.get('/auth/google', passport.authenticate(
+//   'google',
+//   { scope: ['profile', 'email'] }
+// ));
 
-router.get('/oauth2callback', passport.authenticate(
-  'google',
-  {
-    successRedirect: '/videogames',
-    failureMessage: '/videogames'
-  }
-));
+// router.get('/oauth2callback', passport.authenticate(
+//   'google',
+//   {
+//     successRedirect: '/videogames',
+//     failureMessage: '/videogames'
+//   }
+// ));
 
-// Logout
-router.get('/logout', function(req, res) {
-  req.logout();
-  res.redirect('/videogames');
-});
+// Logout - temporarily disabled
+// router.get('/logout', function(req, res) {
+//   req.logout();
+//   res.redirect('/videogames');
+// });
 
 module.exports = router;
